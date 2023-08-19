@@ -10,3 +10,89 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+
+.menu {
+  display: none !important ;
+}
+.link {
+  padding: 10px 20px;
+}
+.link:hover {
+  background-color: grey;
+  color: white;
+}
+.skills img:hover {
+  cursor: pointer !important;
+}
+.skills img {
+  border: solid 2px white;
+}
+.input {
+  margin-bottom: 20px;
+}
+.button {
+  margin-top: 20px;
+}
+.labelTexarea {
+  /* border: solid 2px white !important; */
+  /* top: !important; */
+  position: relative;
+  bottom: 60px;
+  margin-right: 10px;
+}
+.label {
+  margin-right: 10px;
+}
+
+.imgArrow {
+  margin-bottom: 20px;
+}
+.require {
+  margin-top: -20px;
+  color: red;
+}
+.texarea {
+  height: 70px;
+}
+
+/* @media (max-width: 572px) { */
+@media (max-width: 520px) {
+  body {
+    /* overflow-x: scroll !important; */
+  }
+  .navBar {
+    display: none !important;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex !important;
+  }
+
+  .containerPrincip {
+    width: 90% !important;
+    justify-content: center !important;
+    border: solid 2px white;
+  }
+  .sobre {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .imgPerfil {
+    width: 45% !important;
+  }
+
+  .arrow {
+    width: 92% !important;
+    height: 80% !important;
+    align-items: end !important;
+    justify-content: end !important;
+  }
+  .imgArrow {
+    width: 70% !important;
+  }
+  .cards {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+  }
+}
