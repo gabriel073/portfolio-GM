@@ -70,7 +70,7 @@ export default function Contacto() {
             border='solid white 2px'>
             <div id="contacto">
                 <h1>Contacto</h1>
-                <form action="https://formsubmit.co/el/tawawe/gabrielmarzioli@gmail.com" method="POST" onSubmit={handleSubmit} >
+                <form action="https://formcarry.com/s/cB7cA0IiQf" method="POST" onSubmit={handleSubmit} >
 
                     <label htmlFor="nombre">Nombre:</label>
                     <Input
