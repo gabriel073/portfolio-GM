@@ -70,8 +70,8 @@ export default function Contacto() {
             border='solid white 2px'>
             <div id="contacto">
                 <h1>Contacto</h1>
-                <form action="https://formsubmit.co/el/tawawe" method="POST" onSubmit={handleSubmit} >
-                    <input type="hidden" name="_template" value="basic" />
+                <form action="https://formsubmit.co/gabrielmarzioli@gmail.com" method="POST" onSubmit={handleSubmit} >
+
                     <label htmlFor="nombre">Nombre:</label>
                     <Input
                         h={25}
