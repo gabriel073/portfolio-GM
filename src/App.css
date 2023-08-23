@@ -47,6 +47,11 @@
 .imgArrow {
   margin-bottom: 20px;
 }
+.imgArrow:hover {
+  padding: 0;
+  border: 2px solid blue;
+  border-radius: 50%;
+}
 .require {
   margin-top: -20px;
   color: red;
@@ -57,9 +62,6 @@
 
 /* @media (max-width: 572px) { */
 @media (max-width: 520px) {
-  body {
-    /* overflow-x: scroll !important; */
-  }
   .navBar {
     display: none !important;
     flex-direction: column;
