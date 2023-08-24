@@ -57,7 +57,7 @@ function App() {
 
 
           <Stack mb={255} mt={30} id="skills"  >
-            <h2 >Skills</h2>
+            <h2 className="titleSkills" >Skills</h2>
             <Stack display='flex' flexDirection='row' flexWrap='wrap' gap='50' alignContent='center' justifyContent='center' height='30rem'>
               <img src='https://icongr.am/devicon/javascript-original.svg?size=64&color=currentColor' alt="icon-js" width='60' data-toggle="tooltip" title="Javascript" />
               <img src="https://icongr.am/devicon/nodejs-plain.svg?size=64&color=currentColor" alt="icon-nodeJs" width='60' data-toggle="tooltip" title="NodeJs" />

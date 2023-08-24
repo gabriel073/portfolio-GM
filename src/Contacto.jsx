@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Input, Stack, Text, Textarea } from '@chakra-ui/react';
+import Swal from 'sweetalert2';
+import './Contacto.css';
 
 const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta.env;
 
@@ -36,8 +38,14 @@ export default function Contacto() {
 
         emailjs.sendForm(VITE_SERVICE_ID, VITE_TEMPLATE_ID, form.current, VITE_PUBLIC_KEY)
             .then((result) => {
-                console.log('VARIABLE ENTORNO', VITE_SERVICE_ID);
                 console.log(result.text);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Mail enviado con exito!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 form.current.reset();
             }, (error) => {
                 console.log(error.text);
@@ -54,12 +62,10 @@ export default function Contacto() {
             [name]: value
         });
     }
-
     const paternEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-
     return (
-        <Stack mb={150} m='auto' h={620} w={500} alignItems='center' spacing={3} borderRadius={40}
+        <Stack className='container-contacto' mb={150} m='auto' h={620} w={500} alignItems='center' spacing={3} borderRadius={40}
             border='solid white 2px'>
             <div id="contacto">
                 <h1>Contacto</h1>
@@ -75,7 +81,7 @@ export default function Contacto() {
                         name="user_name"
                         // value={formData.name}
                         onChange={handleInputChange}
-                        required
+
                     />
                     <Stack color='red' mb='0px' mt='0px'>
                         {nameError && <p>{nameError}</p>}
@@ -105,7 +111,7 @@ export default function Contacto() {
                         width='100%'
                         // value={formData.message}
                         onChange={handleInputChange}
-
+                        required
                     ></Textarea>
                     <Stack color='red' mb='0px' mt='0px'>
                         {messageError && <p>{messageError}</p>}

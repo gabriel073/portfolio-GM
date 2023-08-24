@@ -60,6 +60,8 @@
   height: 70px;
 }
 
+/* ***************** MEDIA QUERIES ******************************* */
+
 /* @media (max-width: 572px) { */
 @media (max-width: 520px) {
   .navBar {
@@ -74,7 +76,7 @@
   .containerPrincip {
     width: 90% !important;
     justify-content: center !important;
-    border: solid 2px white;
+    /* border: solid 2px white; */
   }
   .sobre {
     flex-direction: column;
@@ -83,18 +85,31 @@
   .imgPerfil {
     width: 45% !important;
   }
+  .titleSkills {
+    margin-bottom: 60px !important;
+  }
 
   .arrow {
-    width: 92% !important;
-    height: 80% !important;
-    align-items: end !important;
-    justify-content: end !important;
+    position: fixed !important;
+    top: 650px !important;
+    left: 420px !important;
+    width: 20% !important;
+    height: 10% !important;
+    /* border: solid 2px white; */
+    /* align-items: end !important;
+    justify-content: flex-end !important; */
   }
-  .imgArrow {
-    width: 70% !important;
-  }
-  .cards {
-    flex-direction: column !important;
-    flex-wrap: wrap !important;
+
+  .imgArrow:hover {
+    padding: 0;
+    border: 2px solid blue;
+    border-radius: 50%;
+    .imgArrow {
+      width: 70% !important;
+    }
+    .cards {
+      flex-direction: column !important;
+      flex-wrap: wrap !important;
+    }
   }
 }
