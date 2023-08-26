@@ -16,6 +16,7 @@
 }
 .link {
   padding: 10px 20px;
+  text-decoration: none !important;
 }
 .link:hover {
   background-color: grey;
@@ -27,11 +28,15 @@
 .skills img {
   border: solid 2px white;
 }
+
 .input {
   margin-bottom: 20px;
 }
 .button {
   margin-top: 20px;
+}
+.buttonsCards {
+  text-decoration: none !important;
 }
 .labelTexarea {
   /* border: solid 2px white !important; */
@@ -74,7 +79,7 @@
   }
 
   .containerPrincip {
-    width: 90% !important;
+    width: 100% !important;
     justify-content: center !important;
     /* border: solid 2px white; */
   }

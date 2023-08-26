@@ -68,7 +68,7 @@ export default function Contacto() {
         <Stack className='container-contacto' mb={150} m='auto' h={620} w={500} alignItems='center' spacing={3} borderRadius={40}
             border='solid white 2px'>
             <div id="contacto">
-                <h1>Contacto</h1>
+                <h1 className='title'>Contacto</h1>
 
                 <form ref={form} onSubmit={sendEmail}>
                     <label>Nombre</label>
@@ -76,7 +76,7 @@ export default function Contacto() {
                         h={25}
                         type="text"
                         width='100%'
-                        mb='0px'
+                        mb='15px'
                         id="name"
                         name="user_name"
                         // value={formData.name}
@@ -92,7 +92,7 @@ export default function Contacto() {
                         type="email"
                         id="email"
                         name="user_email"
-                        mb='10px'
+                        mb='15px'
                         width='100%'
                         // value={formData.email}
                         onChange={handleInputChange}
@@ -103,7 +103,7 @@ export default function Contacto() {
                     </Stack>
                     <label>Mensaje</label>
                     <Textarea
-                        mb='40px'
+                        mb='-30px'
                         id="message"
                         name="message"
                         rows="8"

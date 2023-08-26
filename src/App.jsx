@@ -2,18 +2,26 @@ import { Box, Button, Card, CardBody, CardFooter, Flex, Heading, IconButton, Ima
 import './App.css';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Contacto from './Contacto';
+import ColorToggleMode from '../ColorToggleMode';
+
+
+
+
 
 function App() {
+
   return (
     <>
 
       <Stack justifyContent='center'>
         <Stack id='menu'  >
           <Flex className='navBar' justifyContent='space-around' alignContent='start' mb={110} p={15}>
-            <Link textDecoration='none' className='link' href='#skills' >Skills</Link>
-            <Link textDecoration='none' className='link' href='#proyectos'>Portafolio</Link>
-            <Link textDecoration='none' className='link' href='#contacto'>Contacto</Link>
+            <Link className='link' href='#skills' >Skills</Link>
+            <Link className='link' href='#proyectos'>Portafolio</Link>
+            <Link className='link' href='#contacto'>Contacto</Link>
+            <ColorToggleMode />
           </Flex>
+
           <Menu >
             <MenuButton
               className='menu'
@@ -22,14 +30,14 @@ function App() {
               icon={<HamburgerIcon />}
               variant='outline'
               mb={50}
-              fontSize={30}
-              w={40}
-              h={40}
+              fontSize={50}
+              w={20}
+              h={20}
             />
-            <MenuList className='menu' flexDirection='column' mt='20' gap={30} zIndex='20'>
-              <Link textDecoration='none' href='#skills'>Skills</Link>
-              <Link textDecoration='none' href='#proyectos'>Portafolio</Link>
-              <Link textDecoration='none' href='#contacto'>Contacto</Link>
+            <MenuList className='menu' flexDirection='column' gap={10} zIndex='20'>
+              <Link href='#skills'>Skills</Link>
+              <Link href='#proyectos'>Portafolio</Link>
+              <Link href='#contacto'>Contacto</Link>
             </MenuList>
           </Menu>
 
@@ -44,7 +52,7 @@ function App() {
 
 
         <Stack display='flex' w='45rem' justifyContent='center' className='containerPrincip'>
-          <h2 >Sobre mi</h2>
+          <h1>Sobre mi</h1>
           <Stack mb={150} flexDirection='row' className='sobre'>
             <Stack justifyContent='center' alignItems='center'  >
               <Img src="../assets/foto_perfil.jpg" className='imgPerfil' alt="foto_perfil" width='85%' borderRadius='45%' />
@@ -57,7 +65,7 @@ function App() {
 
 
           <Stack mb={255} mt={30} id="skills"  >
-            <h2 className="titleSkills" >Skills</h2>
+            <h1 className="titleSkills" >Skills</h1>
             <Stack display='flex' flexDirection='row' flexWrap='wrap' gap='50' alignContent='center' justifyContent='center' height='30rem'>
               <img src='https://icongr.am/devicon/javascript-original.svg?size=64&color=currentColor' alt="icon-js" width='60' data-toggle="tooltip" title="Javascript" />
               <img src="https://icongr.am/devicon/nodejs-plain.svg?size=64&color=currentColor" alt="icon-nodeJs" width='60' data-toggle="tooltip" title="NodeJs" />
@@ -85,7 +93,7 @@ function App() {
 
 
           <Stack id="proyectos" mb={100} gap={30} >
-            <h2 >Portafolio</h2>
+            <h1 >Portafolio</h1>
 
             <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
               <Stack >
@@ -94,11 +102,9 @@ function App() {
                   variant='outline'>
                   <Stack>
                     <CardBody>
-                      <Heading size='md'>Libreria Henry</Heading>
+                      <Heading size='md' mb={5}>Libreria Henry</Heading>
                       <Image
-                        w='100%'
-                        objectFit='cover'
-                        maxW={{ base: '100%', sm: '100px' }}
+                        mb={5}
                         src='../assets/libreriaHenry.png'
                         alt='libreriaHenry'
                       />
@@ -108,8 +114,8 @@ function App() {
                       </Text>
                     </CardBody>
                     <CardFooter justifyContent='center' gap={10}>
-                      <Button variant='solid' backgroundColor='blue' width='30%' cursor='pointer' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
+                      <Button variant='solid' backgroundColor='blue' width='30%' cursor='pointer' py={5} ><Link className='buttonsCards' target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} ><Link className='buttonsCards' target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
                     </CardFooter>
                   </Stack>
 
@@ -128,11 +134,9 @@ function App() {
                   variant='outline'>
                   <Stack>
                     <CardBody>
-                      <Heading size='md'>App Food</Heading>
+                      <Heading size='md' mb={5}>App Food</Heading>
                       <Image
-                        w='100%'
-                        objectFit='cover'
-                        maxW={{ base: '100%', sm: '100px' }}
+                        mb={5}
                         src='../assets/recipesApp.png'
                         alt='Caffe Latte'
                       />
@@ -141,8 +145,8 @@ function App() {
                       </Text>
                     </CardBody>
                     <CardFooter justifyContent='center' gap={10}>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al videoDemo</Link></Button>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='50%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al videoDemo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
                     </CardFooter>
                   </Stack>
 
@@ -160,11 +164,9 @@ function App() {
                   variant='outline'>
                   <Stack>
                     <CardBody>
-                      <Heading size='md'>Multi Games</Heading>
+                      <Heading size='md' mb={5}>Multi Games</Heading>
                       <Image
-                        w='100%'
-                        objectFit='cover'
-                        maxW={{ base: '100%', sm: '100px' }}
+                        mb={5}
                         src='../assets/multiGames.png'
                         alt='multiGames'
                       />
@@ -173,8 +175,8 @@ function App() {
                       </Text>
                     </CardBody>
                     <CardFooter justifyContent='center' gap={10}>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="">ir al Demo</Link></Button>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://github.com/gabriel073/multiProjects">Repo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="">ir al Demo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/multiProjects">Repo</Link></Button>
                     </CardFooter>
                   </Stack>
 
@@ -192,11 +194,9 @@ function App() {
                   variant='outline'>
                   <Stack>
                     <CardBody>
-                      <Heading size='md'>PsicoEspacio en Linea</Heading>
+                      <Heading size='md' mb={5}>PsicoEspacio en Linea</Heading>
                       <Image
-                        w='100%'
-                        objectFit='cover'
-                        maxW={{ base: '100%', sm: '100px' }}
+                        mb={5}
                         src='../assets/psicoEspacio.png'
                         alt='psicoEspacio'
                       />
@@ -205,8 +205,8 @@ function App() {
                       </Text>
                     </CardBody>
                     <CardFooter justifyContent='center' gap={10}>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
-                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={12} size='lg'><Link textDecoration='none' target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
+                      <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
                     </CardFooter>
                   </Stack>
 
@@ -234,4 +234,4 @@ function App() {
 
 
 
-export default App
+export default App;
