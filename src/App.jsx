@@ -1,8 +1,8 @@
 import { Box, Button, Card, CardBody, CardFooter, Flex, Heading, IconButton, Image, Img, Link, Menu, MenuButton, MenuList, Stack, Text } from '@chakra-ui/react';
-import './App.css';
+import '../src/App.css';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Contacto from './Contacto';
-import ColorToggleMode from '../ColorToggleMode';
+// import ColorToggleMode from '../ColorToggleMode';
 
 
 
@@ -13,34 +13,40 @@ function App() {
   return (
     <>
 
-      <Stack justifyContent='center' bg="#1A202C"
+      <Stack justifyContent='center'
+        className='containerGral'
         w={['100%']}>
         <Stack id='menu'  >
           <Flex className='navBar' justifyContent='space-around' alignContent='start' mb={110} p={15}>
             <Link className='link' href='#skills' >Skills</Link>
             <Link className='link' href='#proyectos'>Portafolio</Link>
             <Link className='link' href='#contacto'>Contacto</Link>
-            <ColorToggleMode />
+            {/* <ColorToggleMode /> */}
           </Flex>
+          <Stack display='flex' flexDirection='row' h='10rem' justifyContent='space-between' alignItems='center' >
+            <Menu >
+              <MenuButton
+                className='menu'
+                as={IconButton}
+                aria-label='Options'
+                icon={<HamburgerIcon />}
+                variant='outline'
+                mb={50}
+                fontSize={50}
+                w={20}
+                h={20}
+              />
+              <MenuList className='menu' flexDirection='column' gap={10} zIndex='20'>
+                <Link href='#skills'>Skills</Link>
+                <Link href='#proyectos'>Portafolio</Link>
+                <Link href='#contacto'>Contacto</Link>
+              </MenuList>
+              {/* <Stack className='buttonTheme'>
+                <ColorToggleMode />
+              </Stack> */}
+            </Menu>
+          </Stack>
 
-          <Menu >
-            <MenuButton
-              className='menu'
-              as={IconButton}
-              aria-label='Options'
-              icon={<HamburgerIcon />}
-              variant='outline'
-              mb={50}
-              fontSize={50}
-              w={20}
-              h={20}
-            />
-            <MenuList className='menu' flexDirection='column' gap={10} zIndex='20'>
-              <Link href='#skills'>Skills</Link>
-              <Link href='#proyectos'>Portafolio</Link>
-              <Link href='#contacto'>Contacto</Link>
-            </MenuList>
-          </Menu>
 
 
         </Stack>

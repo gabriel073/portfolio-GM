@@ -64,6 +64,9 @@
 .texarea {
   height: 70px;
 }
+.buttonTheme {
+  display: none !important;
+}
 
 /* ***************** MEDIA QUERIES ******************************* */
 
@@ -73,7 +76,15 @@
     display: none !important;
     flex-direction: column;
   }
-
+  .buttonTheme {
+    width: 3.5rem !important;
+    display: flex !important;
+    margin-bottom: 40px;
+    /* border: solid 2px white; */
+  }
+  .containerGral {
+    /* background-color: #1a202c; */
+  }
   .menu {
     display: flex !important;
   }
@@ -81,7 +92,6 @@
   .containerPrincip {
     padding: 2rem;
     width: 100% !important;
-    /* justify-content: center !important; */
     /* border: solid 2px white; */
   }
   .sobre {
@@ -95,8 +105,8 @@
     margin-bottom: 60px !important;
   }
   .imgArrow {
-    fill: white !important;
-    color: white !important;
+    /* fill: white !important;
+    color: white !important; */
     background-color: blue;
     border-radius: 50%;
     width: 80%;
@@ -104,11 +114,11 @@
 
   .arrow {
     position: fixed !important;
-    top: 770px !important;
-    left: 420px !important;
+    top: 800px !important;
+    left: 430px !important;
     width: 20% !important;
     height: 10% !important;
     /* border: solid 2px white; */
-    color: blanchedalmond !important;
+    /* color: blanchedalmond !important; */
   }
 }
