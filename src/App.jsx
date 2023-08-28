@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardFooter, Container, Flex, Heading, IconButton, Image, Img, Link, Menu, MenuButton, MenuList, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Card, CardBody, CardFooter, Flex, Heading, IconButton, Image, Img, Link, Menu, MenuButton, MenuList, Stack, Text } from '@chakra-ui/react';
 import './App.css';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Contacto from './Contacto';
@@ -13,8 +13,8 @@ function App() {
   return (
     <>
 
-      <Container justifyContent='center' bg="blackAlpha.700"
-        w={['100%', '50%']}>
+      <Stack justifyContent='center' bg="#1A202C"
+        w={['100%']}>
         <Stack id='menu'  >
           <Flex className='navBar' justifyContent='space-around' alignContent='start' mb={110} p={15}>
             <Link className='link' href='#skills' >Skills</Link>
@@ -47,7 +47,9 @@ function App() {
 
         <Box position='fixed' display='flex' flexDirection='row' w='5%' h='15%' left='67rem' top='35rem' justifyContent='end' alignItems='end' className='arrow' index='-1'>
           <Link href='#menu'>
+
             <img src="https://icongr.am/entypo/arrow-with-circle-up.svg?size=64&color=currentColor" alt="subir" className='imgArrow' />
+
           </Link>
         </Box>
 
@@ -225,7 +227,7 @@ function App() {
 
 
         </Stack >
-      </Container>
+      </Stack>
 
     </>
 

@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  /* box-sizing: border-box; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -79,8 +79,9 @@
   }
 
   .containerPrincip {
+    padding: 2rem;
     width: 100% !important;
-    justify-content: center !important;
+    /* justify-content: center !important; */
     /* border: solid 2px white; */
   }
   .sobre {
@@ -93,6 +94,13 @@
   .titleSkills {
     margin-bottom: 60px !important;
   }
+  .imgArrow {
+    fill: white !important;
+    color: white !important;
+    background-color: blue;
+    border-radius: 50%;
+    width: 80%;
+  }
 
   .arrow {
     position: fixed !important;
@@ -101,20 +109,6 @@
     width: 20% !important;
     height: 10% !important;
     /* border: solid 2px white; */
-    /* align-items: end !important;
-    justify-content: flex-end !important; */
-  }
-
-  .imgArrow:hover {
-    padding: 0;
-    border: 2px solid blue;
-    border-radius: 50%;
-    .imgArrow {
-      width: 70% !important;
-    }
-    .cards {
-      flex-direction: column !important;
-      flex-wrap: wrap !important;
-    }
+    color: blanchedalmond !important;
   }
 }
